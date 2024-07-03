@@ -43,6 +43,20 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/basic_mobile_robot" TYPE DIRECTORY FILES
+    "/home/sg/dev_ws/src/basic_mobile_robot/config"
+    "/home/sg/dev_ws/src/basic_mobile_robot/launch"
+    "/home/sg/dev_ws/src/basic_mobile_robot/maps"
+    "/home/sg/dev_ws/src/basic_mobile_robot/meshes"
+    "/home/sg/dev_ws/src/basic_mobile_robot/models"
+    "/home/sg/dev_ws/src/basic_mobile_robot/params"
+    "/home/sg/dev_ws/src/basic_mobile_robot/rviz"
+    "/home/sg/dev_ws/src/basic_mobile_robot/src"
+    "/home/sg/dev_ws/src/basic_mobile_robot/worlds"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/sg/dev_ws/src/basic_mobile_robot/build/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/basic_mobile_robot")
 endif()
 
